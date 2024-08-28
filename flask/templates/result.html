@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Analysis Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Stock Analysis Results</h1>
+        </div>
+    </header>
+    <div class="container result">
+        <p>Total Saham: {{ total }}</p>
+        <hr>
+        {% for stock in lulus %}
+            <div class="stock">
+                <p>
+                    Kode Saham: {{ stock.kode_saham }}<br>
+                    Harga Awal {{ minggu }} Minggu: {{ stock.harga_awal }}<br>
+                    Harga Hari Ini: {{ stock.harga_hari_ini }}<br>
+                    ROC: {{ stock.roc }}%<br>
+                    <a href="{{ stock.link_saham }}" target="_blank">Link Saham</a>
+                </p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

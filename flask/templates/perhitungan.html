@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Stock Analysis Form</h1>
+        </div>
+    </header>
+    <div class="container header1">
+        <form method="POST">
+            <label for="minggu">Berapa Minggu:</label>
+            <input type="number" id="minggu" name="minggu" required>
+
+            <h2>Week High Breakout</h2>
+            <label for="breakout">Break Out Period:</label>
+            <select id="breakout" name="breakout">
+                <option value="universe 1">Universe 1</option>
+                <option value="universe2">Universe 2</option>
+                <option value="universe3">Universe 3</option>
+            </select>
+
+            <h2>Rate of Change (ROC)</h2>
+            <label for="roc_period">Masukkan ROC period:</label>
+            <input type="number" id="roc_period" name="roc_period" required>
+            <label for="min_roc">Min ROC:</label>
+            <input type="number" id="min_roc" name="min_roc" required>
+
+            <h2>Average Value Transaction</h2>
+            <label for="avt_period">AVT% period:</label>
+            <input type="number" id="avt_period" name="avt_period" required>
+            <label for="min_value">Min Value:</label>
+            <input type="number" id="min_value" name="min_value" required>
+
+            <h2>Average True Range (ATR%)</h2>
+            <label for="atr_period">ATR period:</label>
+            <input type="number" id="atr_period" name="atr_period" required>
+            <label for="min_atr">Min ATR%:</label>
+            <input type="number" id="min_atr" name="min_atr" required>
+            <label for="max_atr">Max ATR%:</label>
+            <input type="number" id="max_atr" name="max_atr" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
